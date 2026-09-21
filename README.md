@@ -2,11 +2,7 @@
 Chuyển đổi định dạng ảnh/ video
 
 **requirements:**
-Pillow>=10.0.0
-pillow-jxl-plugin>=0.1.3
-imagecodecs>=2023.9.18
-PySide6>=6.5.0
-opencv-python>=4.8.0
+TẢI ffmpeg về để trong thư mục: ffmpeg
 ================================================================================
            CAC CAU LENH CAN THIET DE CAI DAT VA CHAY UNG DUNG
 ================================================================================
