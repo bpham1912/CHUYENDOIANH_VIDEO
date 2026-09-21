@@ -1,2 +1,81 @@
 # CHUYENDOIANH_VIDEO
 Chuyển đổi định dạng ảnh/ video
+
+**requirements:**
+Pillow>=10.0.0
+pillow-jxl-plugin>=0.1.3
+imagecodecs>=2023.9.18
+PySide6>=6.5.0
+opencv-python>=4.8.0
+================================================================================
+           CAC CAU LENH CAN THIET DE CAI DAT VA CHAY UNG DUNG
+================================================================================
+
+DU AN: Bo Chuyen Doi Phuong Tien Da Nang (Anh, Video, Audio)
+THU MUC: C:\Users\PC\Desktop\CHUYENDOIANH
+
+--------------------------------------------------------------------------------
+1. CACH CHAY NHANH NHAT (KHUYEN DUNG)
+--------------------------------------------------------------------------------
+- Chi can nhap dup (double-click) vao file:
+  run.bat
+
+  -> File nay se tu dong kiem tra Python, tao moi truong ao (.venv),
+     tu dong cai cac thu vien con thieu va khoi chay giao dien.
+
+--------------------------------------------------------------------------------
+2. CACH CHAY BANG MOT DONG LENH DUY NHAT (ONE-LINER)
+--------------------------------------------------------------------------------
+Mo CMD hoac PowerShell tai thu muc du an va chay:
+
+  .venv\Scripts\python converter.py
+
+
+--------------------------------------------------------------------------------
+3. CAC CAU LENH CHAY THU CONG TUNG BUOC (STEP-BY-STEP)
+--------------------------------------------------------------------------------
+Neu muon tu thuc hien bang Command Prompt (CMD) hoac PowerShell:
+
+Buoc 1: Di chuyen vao thu muc du an
+  cd /d C:\Users\PC\Desktop\CHUYENDOIANH
+
+Buoc 2: Tao moi truong ao Python (neu chua co thu muc .venv)
+  python -m venv .venv
+
+Buoc 3: Kich hoat moi truong ao
+  - Neu dung Command Prompt (CMD):
+    .venv\Scripts\activate.bat
+
+  - Neu dung PowerShell:
+    .\.venv\Scripts\Activate.ps1
+    *(Luu y: Neu PowerShell bao loi "execution of scripts is disabled",
+     hay chay lenh sau truoc: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass)*
+
+Buoc 4: Nang cap pip va cai dat day du cac thu vien
+  python -m pip install --upgrade pip
+  pip install -r requirements.txt
+
+  *(Hoac co the go truc tiep ten cac thu vien:)*
+  pip install Pillow pillow-jxl-plugin imagecodecs PySide6 opencv-python
+
+Buoc 5: Khoi chay ung dung
+  python converter.py
+
+
+--------------------------------------------------------------------------------
+4. DANH SACH THU VIEN TRONG requirements.txt
+--------------------------------------------------------------------------------
+Pillow>=10.0.0            (Xu ly hinh anh co ban: JPG, PNG, WEBP, BMP, TIFF)
+pillow-jxl-plugin>=0.1.3  (Plugin doc/ghi dinh dang JPEG XL .jxl)
+imagecodecs>=2023.9.18    (Bo codec ho tro giai ma cac chuan anh cao cap)
+PySide6>=6.5.0            (Giao dien Qt6, ho tro QMediaPlayer, QAudioOutput, QVideoSink)
+opencv-python>=4.8.0      (Trich xuat metadata video, phuc vu xem truoc va crop)
+
+
+--------------------------------------------------------------------------------
+5. LUU Y QUAN TRONG VE FFMPEG
+--------------------------------------------------------------------------------
+- De su dung Tab 2 (Chuyen doi Video/Audio) va Tab 3 (Cat/Crop video):
+  Can dam bao file "ffmpeg.exe" duoc dat trong thu muc:
+  C:\Users\PC\Desktop\CHUYENDOIANH\ffmpeg\ffmpeg.exe
+================================================================================
